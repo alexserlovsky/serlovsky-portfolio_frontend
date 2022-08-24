@@ -9,19 +9,7 @@ export default function Home() {
         <meta name="description" content="Serlovsky Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main>
-        <h1>Serlovsky Portfolio</h1>
-        <h1>Serlovsky Portfolio</h1>
-        <h1>Serlovsky Portfolio</h1>
-        <h1>Serlovsky Portfolio</h1>
-        <h1>Serlovsky Portfolio</h1>
-        <h1>Serlovsky Portfolio</h1>
-        <h1>Serlovsky Portfolio</h1>
-        <h1>Serlovsky Portfolio</h1>
-        <h1>Serlovsky Portfolio</h1>
-        <h1>Serlovsky Portfolio</h1>
-      </main>
+      <h1>Serlovsky Portfolio</h1>
     </div>
   )
 }
