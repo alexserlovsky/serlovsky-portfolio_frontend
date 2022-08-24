@@ -4,9 +4,9 @@ import Footer from "./Footer";
 function Layout(props) {
   return (
     <Fragment>
-      <Header />
+      <Header data = {props.header}/>
       <main>{props.children}</main>
-      <Footer />
+      <Footer data = {props.footer} />
     </Fragment>
   );
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 
-function Footer() {
+function Footer(props) {
+  const data = props.data;
   return (
     <div>Footer</div>
   )

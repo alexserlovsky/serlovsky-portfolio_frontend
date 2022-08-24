@@ -1,35 +1,33 @@
 import Layout from "../components/layout/Layout";
 import App from "next/app";
-
-import { createContext, useEffect } from "react";
-import { fetchAPI } from "../util/getAPI";
+import { useEffect } from "react";
+import { fetchAPI } from "../utils/fetchAPI";
 
 function MyApp({ Component, pageProps }) {
-  console.log(pageProps);
+  const { header, footer } = pageProps;
   return (
-    <Layout>
+    <Layout header={header} footer={footer}>
       <Component {...pageProps} />
     </Layout>
   );
 }
 
-MyApp.getInitialProps = async(context) => {
-  const appProps = await App.getInitialProps(ctx);
+MyApp.getInitialProps = async (context) => {
+  const appProps = await App.getInitialProps(context);
 
-  const header = fetchAPI('header', {
-    populate:'*',
+  const header = await fetchAPI("header", {
+    populate: "*",
   });
-  const footer = fetchAPI('footer', {
-    populate:'*',
+  const footer = await fetchAPI("footer", {
+    populate: "*",
   });
-  return({
+  return {
     ...appProps,
-    pageProps:{
+    pageProps: {
       header: header.data,
-      footer: footer.data
-    }
-  })
-}
-
+      footer: footer.data,
+    },
+  };
+};
 
 export default MyApp;
