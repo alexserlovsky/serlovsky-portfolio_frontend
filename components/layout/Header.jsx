@@ -1,10 +1,19 @@
-import React from 'react'
+import React from 'react';
+import Link from 'next/link';
+import styled from "styled-components";
+
+const HeaderContainer = styled.header`
+`;
 function Header(props) {
   const data = props.data;
   console.log(data);
   return (
-    <div>Header</div>
+    <HeaderContainer>
+      <div className="logo-box">
+      </div>
+      <ul className="header-links"></ul>
+    </HeaderContainer>
   )
 }
 
-export default Header
+export default Header;
