@@ -1,9 +1,8 @@
 import React from 'react'
 
-function Footer(props) {
-  const data = props.data;
+function Footer() {
   return (
-    <div>Footer</div>
+    <div></div>
   )
 }
 
